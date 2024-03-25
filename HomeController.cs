@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Product.Areas.UserPanel.Controllers
+namespace Product.Controllers
 {
     public class HomeController : Controller
     {
-        [Area("UserPanel")]
-        [Authorize]
         public IActionResult Index()
+        {
+            return View();
+        }
+        public IActionResult Order()
         {
             return View();
         }
